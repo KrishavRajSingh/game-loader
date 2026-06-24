@@ -5,7 +5,7 @@
   "description": "Monorepo for the @game-loader/react library and its demo site.",
   "scripts": {
     "dev": "pnpm --filter docs dev",
-    "build": "pnpm -r build",
+    "build": "pnpm --filter @game-loader/react build && pnpm --filter docs build",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
