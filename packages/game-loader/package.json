@@ -1,0 +1,85 @@
+{
+  "name": "@game-loader/react",
+  "version": "0.1.0",
+  "description": "Interactive game loaders for React — drop-in entertainment while data fetches.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./meta": {
+      "types": "./dist/games/meta.d.ts",
+      "import": "./dist/games/meta.js",
+      "require": "./dist/games/meta.cjs"
+    },
+    "./games/dino": {
+      "types": "./dist/games/dino.d.ts",
+      "import": "./dist/games/dino.js",
+      "require": "./dist/games/dino.cjs"
+    },
+    "./games/snake": {
+      "types": "./dist/games/snake.d.ts",
+      "import": "./dist/games/snake.js",
+      "require": "./dist/games/snake.cjs"
+    },
+    "./games/pong": {
+      "types": "./dist/games/pong.d.ts",
+      "import": "./dist/games/pong.js",
+      "require": "./dist/games/pong.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "react-chrome-dino": "0.1.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "jsdom": "^25.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "react",
+    "loader",
+    "loading",
+    "game",
+    "interactive",
+    "spinner",
+    "dino",
+    "snake",
+    "pong"
+  ]
+}
